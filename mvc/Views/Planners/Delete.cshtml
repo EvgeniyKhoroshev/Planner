@@ -1,10 +1,8 @@
 ﻿@model mvc.Models.Planner
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Удаление";
 }
-
-<h2>Удалить задачу</h2>
 
 <h3>Уверены, что хотите удалить задачу?</h3>
 <div>
@@ -12,7 +10,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.content)
+            Содержимое задачи :
         </dt>
         <dd>
             @Html.DisplayFor(model => model.content)
@@ -21,7 +19,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Удалить" class="btn btn-default" /> |
+        <a asp-action="Index">Вернуться к списку задач</a>
     </form>
 </div>

@@ -4,14 +4,13 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Содержимое</h2>
 
 <div>
     <h4>Задача</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.content)
+            Содержимое задачи : 
         </dt>
         <dd>
             @Html.DisplayFor(model => model.content)
@@ -19,6 +18,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Delete" asp-route-id="@Model.id">Удалить</a> |
+    <a asp-action="Edit" asp-route-id="@Model.id">Изменить</a> |
     <a asp-action="Index">Вернуться к списку задач</a>
 </div>

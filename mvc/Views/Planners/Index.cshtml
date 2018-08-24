@@ -4,22 +4,22 @@
     ViewData["Title"] = "Список задач";
 }
 
-<h2>Index</h2>
+<h2>Планировщик</h2>
 
 <p>
-    <a asp-action="Create">Создать задачу</a>
+    <a asp-action="Create">Добавить задачу</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.content)
+                Содержимое задачи :
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Reverse()) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.content)
